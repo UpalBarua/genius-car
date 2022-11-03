@@ -1,0 +1,17 @@
+/* ****************** */
+/* UTILITY CLASSES    */
+/* ****************** */
+.primary-title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent-400);
+}
+
+.secondary-title {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+}
+
+.body-text {
+  color: var(--clr-secondary-300);
+}

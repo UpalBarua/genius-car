@@ -1,0 +1,26 @@
+/* ******************** */
+/* BUTTON STYLES        */
+/* ******************** */
+.button {
+  padding: var(--spacing-200) var(--spacing-400);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-500);
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.button:hover,
+.button:focus {
+  outline: 0;
+}
+
+.primary {
+  color: var(--clr-primary-400);
+  background-color: var(--clr-accent-400);
+}
+
+.secondary {
+  color: var(--clr-accent-400);
+  border-color: var(--clr-accent-400);
+}

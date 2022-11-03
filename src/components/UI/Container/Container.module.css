@@ -1,0 +1,8 @@
+/* ******************** */
+/* CONTAINER STYLES     */
+/* ******************** */
+.container {
+  max-width: min(80rem, 100% - 40px);
+  margin-inline: auto;
+  padding: var(--spacing-300);
+}
