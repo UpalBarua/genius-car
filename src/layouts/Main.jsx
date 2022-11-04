@@ -8,16 +8,16 @@ const Main = () => {
     <div
       style={{
         display: 'grid',
-        gridTemplateRows: '1fr 1fr',
+        gridTemplateRows: 'max-content 1fr',
       }}>
-      <div>
+      <div
+        style={{
+          gridRow: '1/2',
+        }}>
         <Navbar />
         <Outlet />
       </div>
-      <div
-        style={{
-          gridRow: '2/-1',
-        }}>
+      <div>
         <Footer />
       </div>
     </div>

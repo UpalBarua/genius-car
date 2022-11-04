@@ -1,0 +1,28 @@
+/* ******************* */
+/* SERVICES STYLES     */
+/* ******************* */
+.services {
+  display: grid;
+  gap: var(--spacing-300);
+  text-align: center;
+  justify-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-500);
+  margin-block: var(--spacing-400);
+}
+
+@media screen and (min-width: 30em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,27 @@
+/* ***************** */
+/* SERVICES CARD     */
+/* ***************** */
+.card {
+  display: grid;
+  gap: var(--spacing-200);
+  padding: var(--spacing-300);
+  text-align: start;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-accent-400);
+  font-weight: var(--fw-semibold);
+}
