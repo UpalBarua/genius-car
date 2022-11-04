@@ -1,0 +1,42 @@
+/* **************** */
+/* PAGE NOT FOUND   */
+/* **************** */
+.notFound {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  gap: var(--spacing-300);
+  place-content: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent-400);
+}
+
+.text {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+}
+
+@media screen and (min-width: 30em) {
+  .title {
+    font-size: 6.5rem;
+  }
+
+  .text {
+    font-size: var(--fs-700);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .title {
+    font-size: 7.5rem;
+  }
+
+  .text {
+    font-size: var(--fs-750);
+  }
+}
