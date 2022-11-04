@@ -30,3 +30,12 @@
   font-weight: var(--fw-regular);
   padding: var(--spacing-100);
 }
+
+.rounded {
+  display: grid;
+  place-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--clr-primary-500);
+  border-radius: 50%;
+}

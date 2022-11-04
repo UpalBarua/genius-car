@@ -1,0 +1,58 @@
+/* ******************** */
+/* SIGNUP FORM          */
+/* ******************** */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: var(--spacing-800);
+  margin-block: var(--spacing-800);
+}
+
+.column:first-child {
+  display: none;
+}
+
+.column:nth-child(2) {
+  max-width: 50rem;
+}
+
+.footer {
+  display: grid;
+  gap: var(--spacing-400);
+  text-align: center;
+  color: var(--clr-secondary-400);
+  margin-block: var(--spacing-700);
+}
+
+.text {
+  font-weight: var(--fw-semibold);
+}
+
+.text > a {
+  color: var(--clr-accent-400);
+}
+
+.signupOptions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-100);
+}
+
+@media screen and (min-width: 62em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .column:first-child {
+    display: block;
+  }
+
+  .column:nth-child(2) {
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-400) var(--spacing-800);
+    border-radius: 10px;
+    width: 100%;
+  }
+}
