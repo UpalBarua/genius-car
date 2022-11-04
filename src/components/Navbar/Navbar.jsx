@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BsHandbag, BsSearch } from 'react-icons/bs';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import Container from '../UI/Container/Container';
 import Button from '../UI/Button/Button';
 import styles from './Navbar.module.css';
@@ -9,6 +10,7 @@ import logo from '../../assets/logo.svg';
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [navbar] = useAutoAnimate();
 
   const handleNavOpenToggle = () => {
     setIsNavOpen(prevIsNavOpen => !prevIsNavOpen);
@@ -16,7 +18,7 @@ const Navbar = () => {
 
   return (
     <Container>
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} ref={navbar}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="" />
         </Link>
