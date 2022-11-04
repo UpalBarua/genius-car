@@ -1,0 +1,50 @@
+/* ******************** */
+/* ABOUT STYLES         */
+/* ******************** */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-700);
+  text-align: center;
+  margin-block: var(--spacing-900);
+}
+
+.column:first-child {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.column:first-child > img:first-child {
+  grid-column: 1/11;
+  grid-row: 1/11;
+}
+
+.column:first-child > img:last-child {
+  grid-column: 5/13;
+  grid-row: 5/13;
+  border: 5px solid var(--clr-primary-400);
+}
+
+.column:first-child > img {
+  border-radius: 5px;
+}
+
+.column:last-child {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-300);
+}
+
+@media screen and (min-width: 48em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: start;
+    gap: var(--spacing-800);
+  }
+
+  .column:last-child {
+    justify-items: start;
+  }
+}

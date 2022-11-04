@@ -8,10 +8,17 @@
 }
 
 .secondary-title {
-  font-size: var(--fs-800);
+  font-size: var(--fs-750);
   font-weight: var(--fw-bold);
+  line-height: 1.2;
 }
 
 .body-text {
   color: var(--clr-secondary-300);
+}
+
+@media screen and (min-width: 48em) {
+  .secondary-title {
+    font-size: var(--fs-800);
+  }
 }
