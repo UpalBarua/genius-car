@@ -2,7 +2,7 @@
 /* BUTTON STYLES        */
 /* ******************** */
 .button {
-  padding: var(--spacing-200) var(--spacing-400);
+  padding: var(--spacing-100) var(--spacing-300);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-500);
   background-color: transparent;
@@ -23,4 +23,9 @@
 .secondary {
   color: var(--clr-accent-400);
   border-color: var(--clr-accent-400);
+}
+
+.square {
+  font-weight: var(--fw-regular);
+  padding: var(--spacing-100);
 }

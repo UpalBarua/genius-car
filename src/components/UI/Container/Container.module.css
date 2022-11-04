@@ -2,7 +2,7 @@
 /* CONTAINER STYLES     */
 /* ******************** */
 .container {
-  max-width: min(80rem, 100% - 40px);
+  max-width: min(80rem, 100% - 20px);
   margin-inline: auto;
-  padding: var(--spacing-300);
+  padding: var(--spacing-100);
 }
