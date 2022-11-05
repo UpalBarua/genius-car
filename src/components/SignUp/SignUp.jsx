@@ -9,6 +9,7 @@ import validateEmail from '../../hooks/useFormValidation/validateEmail';
 import validatePassword from '../../hooks/useFormValidation/validatePassword';
 import styles from './SignUp.module.css';
 import loginImg from '../../assets/images/login/login.svg';
+import { useAuth } from '../../contexts/AuthContext';
 
 const SignUp = () => {
   const {
@@ -32,6 +33,30 @@ const SignUp = () => {
     handleInputTouch: handlePasswordTouch,
   } = useFormValidation(validatePassword);
 
+  const { signUp, googleSignUp } = useAuth();
+
+  const handleSignUp = async event => {
+    event.preventDefault();
+
+    try {
+      await signUp(emailValue, passwordValue);
+      console.log('SIGNUP SUCCESSFUL!');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleGoogleSignUp = async event => {
+    event.preventDefault();
+
+    try {
+      await googleSignUp();
+      console.log('SIGNUP SUCCESSFUL!');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Container className={styles.grid}>
       <div className={styles.column}>
@@ -41,7 +66,7 @@ const SignUp = () => {
       <div className={styles.column}>
         <h2 className="form-title">Sign Up</h2>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSignUp}>
           <div className="form-container">
             <label className="label">Name</label>
             <input
@@ -96,7 +121,7 @@ const SignUp = () => {
             </li>
 
             <li className={styles.signupOption}>
-              <Button variant="rounded">
+              <Button variant="rounded" onClick={handleGoogleSignUp}>
                 <BsGoogle />
               </Button>
             </li>
